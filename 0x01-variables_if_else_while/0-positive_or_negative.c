@@ -1,27 +1,26 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+/** 
+ * main - this is the main function
+ * Return: always 0
  */
+
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 int main(void)
 {
-    int n;
+	int n;
 
-    srand(time(0)); /* Seed the random number generator with current time */
-
-    n = rand() - RAND_MAX / 2; /* Generate a random number */
-
-    printf("%d ", n); /* Print the generated number */
-
-    if (n > 0)
-    printf("is positive\n");
-    else if (n == 0)
-    printf("is zero\n");
-    else
-    printf("is negative\n");
-    return (0);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n > 0)
+	printf("%d is positive\n", n);
+	else if (n == 0)
+	printf("%d is zero\n", n);
+	else
+	printf("%d is negative\n", n);
+        return (0);
 }
