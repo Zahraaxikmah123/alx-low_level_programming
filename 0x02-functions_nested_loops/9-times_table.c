@@ -5,36 +5,28 @@
  */
 void times_table(void)
 {
-int x, y, z, u;
+int row, column, result;
 
-for (x = 0; x <= 9; x++)
+for (row = 0; row <= 9; row++)
 {
-for (y = 0; y <= 9; y++)
+for (column = 0; column <= 9; column++)
 {
-int product = x * y;
-z = product / 10; /* tens digit */
-u = product % 10; /* units digit */
-
-if (y == 0)
-{
-_putchar('0');
-}
-else
+result = row * column;
+if (column != 0)
 {
 _putchar(',');
 _putchar(' ');
 }
 
-if (z == 0)
+if (result >= 10)
 {
-_putchar(' ');
+_putchar((result / 10) + '0');
+_putchar((result % 10) + '0');
 }
 else
 {
-_putchar(z + '0');
+_putchar(result + '0');
 }
-
-_putchar(u + '0');
 }
 _putchar('\n');
 }
