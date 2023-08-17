@@ -20,4 +20,3 @@ else
 printf("%d is negative\n", i);
 }
 }
-
